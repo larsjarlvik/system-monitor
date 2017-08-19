@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=System Monitor
+GenericName=System Monitor
+Comment=Monitor processes and resources
+Categories=Utility;
+Exec=com.github.larsjarlvik.system-monitor
+Icon=application-default-icon
+Terminal=false
+Type=Application
+X-GNOME-Gettext-Domain=system-monitor
+Keywords=Monitor;System;Resources
