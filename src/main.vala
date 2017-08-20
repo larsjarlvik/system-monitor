@@ -40,7 +40,7 @@ namespace SystemMonitor {
             CpuMonitor.print_cpu();
 
             var application = new Main();
-            return application.run (args);
+            return application.run(args);
         }
     }
 }

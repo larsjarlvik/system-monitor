@@ -23,12 +23,12 @@ set(VERSION_INFO "Initial release")
 find_package(PkgConfig)
 
 # now let's actually check for the required dependencies
-pkg_check_modules(DEPS REQUIRED gtk+-3.0 granite libgtop-2.0)
+pkg_check_modules(DEPS REQUIRED gtk+-3.0 granite libgtop-2.0 gee-0.8)
 
 include_directories(/usr/include/libgtop-2.0 /usr/include/granite /usr/include/gee-0.8)
 
 add_definitions(${DEPS_CFLAGS})
-link_libraries(${DEPS_LIBRARIES} gtop-2.0 granite)
+link_libraries(${DEPS_LIBRARIES} gtop-2.0 granite gee-0.8)
 link_directories(${DEPS_LIBRARY_DIRS})
 
 
@@ -44,6 +44,7 @@ include(ValaPrecompile)
 vala_precompile(VALA_C ${EXEC_NAME}
     src/main.vala
     src/Core/CpuMonitor.vala
+    src/Core/ProcessMonitor.vala
     src/Widgets/Sidebar.vala
     src/Widgets/SidebarEntry.vala
     src/Widgets/ProcessPage.vala
@@ -53,7 +54,9 @@ PACKAGES
     gtk+-3.0
     glib-2.0
     granite
+    posix
     libgtop-2.0
+    gee-0.8
 
 # add custom vapis
 OPTIONS

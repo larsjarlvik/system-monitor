@@ -18,6 +18,10 @@ namespace SystemMonitor.Widgets {
             build_ui();
         }
 
+        public void update_subtitle(string content) {
+            subtitle_label.label = content;
+        }
+
         private void build_ui () {
             grid = new Gtk.Grid ();
             grid.margin = 6;

@@ -1294,7 +1294,7 @@ namespace GTop {
 	[CCode (cheader_filename = "glibtop.h", cname = "glibtop_get_proc_uid")]
 	public static void get_proc_uid (out GTop.ProcUid buf, int pid);
 	[CCode (cheader_filename = "glibtop.h", cname = "glibtop_get_proclist")]
-	public static int get_proclist (out GTop.ProcList buf, int64 which, int64 arg);
+	public static int* get_proclist (out GTop.ProcList buf, int64 which, int64 arg);
 	[CCode (cheader_filename = "glibtop.h", cname = "glibtop_get_sem_limits")]
 	public static void get_sem_limits (out GTop.SemLimits buf);
 	[CCode (cheader_filename = "glibtop.h", cname = "glibtop_get_shm_limits")]
